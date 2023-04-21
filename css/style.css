@@ -1,0 +1,29 @@
+.row_height {
+  height: 60px;
+}
+
+.col_width {
+  width: 60px;
+  background-color: grey;
+}
+.grey {
+  background-color: rgb(218, 218, 218);
+}
+.border {
+  border-radius: 100%;
+}
+.row {
+  justify-content: center;
+}
+.green {
+}
+.blue {
+}
+.white {
+}
+.black {
+}
+.yellow {
+}
+.red {
+}

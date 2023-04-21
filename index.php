@@ -1,50 +1,85 @@
-<?php
-    function write(string $message)
-    {
-        fwrite(STDOUT, $message . PHP_EOL);
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterMind</title>
+    <link rel="stylesheet" href="./css/style.css">
+     <!-- Lien Bootstrap -->
+     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
 
-    write("Début du jeu");
-    $ran1 = rand(0,9);
-    $ran2 = rand(0,9);
-    $ran3 = rand(0,9);
-    $ran4 = rand(0,9);
-    $essaies = 0;
-    $ranArray = [$ran1, $ran2, $ran3, $ran4];
-    $solution = ($ran1 . $ran2 . $ran3 . $ran4);
- 
-    $guess ="";
+    <div class="container grey p-5"  >
+        <h1 class="text-center">MasterMind</h1>
+        <div class="row row_height mt-5">
+            <div class=" col_width border" onclick=""></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
+        <div class="row row_height ">
+            <div class=" col_width border" ></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+            <div class=" col_width border"></div>
+        </div>
 
-    while ($guess != $solution && $essaies < 10){
-        $essaies++;
-        PHP_EOL;
-        write("=========== Essaie Numéro: " . $essaies . " ============");
-        $userGuess = readline("Entrez votre combinaison à quatre chiffres : ");
-        $userGuess = str_replace(' ' , '', $userGuess);
-        $userArray = str_split($userGuess);
-        if (!is_numeric($userGuess)){
-            write("Veuillez rentrer un nombre");
-            continue;
-        }
-
-        if (strlen($userGuess) != 4){
-            write("Veuillez rentrez un nombre 4 chiffres");
-            continue;
-        }
-        $guess1 = $userArray[0];
-        $guess2 = $userArray[1];
-        $guess3 = $userArray[2];
-        $guess4 = $userArray[3];
-
-        foreach($userArray as $key => $value) {
-            if($ranArray[$key] == $value) {
-                write("le chiffre en position " . $key +1 . " est à la bonne place");
-            }elseif(in_array($value,$ranArray)){
-                write($value . " est dans le nombre");
-            }
-        }
-
-        if($userGuess === $solution) {
-            die("========== Vous avez Gagnez ===========");
-        }
-    }
+    </div>
+    
+</body>
+</html>
