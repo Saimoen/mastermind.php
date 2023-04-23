@@ -4,6 +4,8 @@
         fwrite(STDOUT, $message . PHP_EOL);
     }
 
+    /** TEST LINUX */
+
     write("Début du jeu");
     $ran1 = rand(0,9);
     $ran2 = rand(0,9);
